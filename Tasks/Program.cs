@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Tasks
@@ -7,10 +8,11 @@ namespace Tasks
     {
         static void Main(string[] args)
         {
-            Deadline3.OddNumbersTaskActive();
-            Deadline3.ArrayReplacmentTaskActive();
-            Deadline3.FibonacciArrayTaskActive();
+            Deadline4.SquareMatrixTaskAction();
+            Deadline4.GreyscaleTaskAction();
+            Deadline4.LedTaskActive();
         }
 
+        
     }
 }
