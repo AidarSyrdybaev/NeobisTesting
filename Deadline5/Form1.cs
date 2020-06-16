@@ -22,31 +22,90 @@ namespace Deadline5
         private void Form1_Load(object sender, EventArgs e)
         {
             Shop = new Shop();
-            Shop.AddProduct(new Product ("Iphone", 216, Category.Technic));
-            ProductsDataGridView.DataSource = Shop.ProductAndProductCount.Keys.ToList();
-            ProductsDataGridView.Columns.Remove("Name");
-            ProductsDataGridView.Columns.Remove("Price");
-            ProductsDataGridView.Columns.Remove("Category");
-            ProductsDataGridView.Columns[0].DataPropertyName = "Name";
-            ProductsDataGridView.Columns[1].DataPropertyName = "Price";
-            ProductsDataGridView.Columns[2].DataPropertyName = "Category";
-            ProductCountMskTxtBox.Enabled = false;
+            ProductListRefresh();
+            MoneyLb.Text = Shop.Money.ToString();
+            ProductInformationFill();
         }
 
         private void BuyProductBtn_Click(object sender, EventArgs e)
         {
-            if (ProductsDataGridView.SelectedRows != null && ProductsDataGridView.SelectedRows.Count == 1)
+            if (ProductListBx.SelectedItem != null)
             {
-                Shop.ProductBuy((Product)ProductsDataGridView.SelectedRows[0].Tag, int.Parse(BuyProductBtn.Text));
+                try
+                {
+                    var Product = (Product)ProductListBx.SelectedItem;
+                    Shop.ProductBuy(Product, int.Parse(BuyProductCountMskTxtBox.Text));
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
-        private void ProductsDataGridView_Click(object sender, EventArgs e)
+        private void ProductInformationFill()
         {
-            ProductCountMskTxtBox.Text = ProductsDataGridView.SelectedCells[0].Value.ToString();
+            if (ProductListBx.SelectedItem != null)
+            {
+                var Product = (Product)ProductListBx.SelectedItem;
+                ProductNameTxt.Text = Product.Name;
+                ProductPriceTxt.Text = Product.Price.ToString();
+                ProductCategoryTxt.Text = Product.Category.ToString();
+                ProductCountTxt.Text = Shop.ProductAndProductCount[Product].ToString();
+            }
         }
 
-        private void Inizialization()
-        { }
+        private void ProductListBx_Click(object sender, EventArgs e)
+        {
+            ProductInformationFill();
+        }
+
+        private void SellProductBtn_Click(object sender, EventArgs e)
+        {
+            if (ProductListBx.SelectedItem != null)
+            {
+                try
+                {
+                    var Product = (Product)ProductListBx.SelectedItem;
+                    Shop.ProductSell(Product, int.Parse(SellProductCountMskTxtBox.Text));
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void ProductRemoveBt_Click(object sender, EventArgs e)
+        {
+            var Product = (Product)ProductListBx.SelectedItem;
+            Shop.ProductAndProductCount.Remove(Product);
+        }
+
+        private void ProductAddBt_Click(object sender, EventArgs e)
+        {
+            AddForm addForm = new AddForm(this);
+            addForm.Show();
+        }
+
+        public void ProductListRefresh()
+        {
+            ProductListBx.DataSource = Shop.ProductAndProductCount.Keys.ToList();
+            ProductListBx.DisplayMember = "Name";
+            ProductListBx.ValueMember = "Name";
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FileWorker.SaveMoney(Shop.Money);
+            FileWorker.SaveInformation(Shop.ProductAndProductCount);
+        }
+
+        private void MoneyAddBtn_Click(object sender, EventArgs e)
+        {
+            Shop.Money += int.Parse(MoneyMskTxtBox.Text);
+            MoneyLb.Text = Shop.Money.ToString();
+            FileWorker.SaveMoney(Shop.Money);
+        }
     }
 }

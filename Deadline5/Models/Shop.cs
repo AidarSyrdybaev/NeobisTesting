@@ -13,7 +13,8 @@ namespace Deadline5.Models
 
         public Shop()
         {
-            ProductAndProductCount = new Dictionary<Product, int>();
+            ProductAndProductCount = FileWorker.GetProductAndProductsCount();
+            Money = FileWorker.GetSavedMoney();
             
         }
 
@@ -34,7 +35,10 @@ namespace Deadline5.Models
                 Money -= product.Price * ProductBuyCount;
                 ProductAndProductCount[product] += ProductBuyCount;
             }
-            throw new Exception("Нехватает денег");
+            else
+            {
+                throw new Exception("Нехватает денег");
+            }
         }
 
         public void DeleteProduct(Product product)
