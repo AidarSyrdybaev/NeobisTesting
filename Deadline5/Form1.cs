@@ -24,17 +24,25 @@ namespace Deadline5
             Shop = new Shop();
             ProductListRefresh();
             MoneyLb.Text = Shop.Money.ToString();
+            CategoryCheckCmbBx.Items.Add(Category.Accessories);
+            CategoryCheckCmbBx.Items.Add(Category.Food);
+            CategoryCheckCmbBx.Items.Add(Category.Technic);
+            CategoryCheckCmbBx.Items.Add(Category.None);
+            CategoryCheckCmbBx.SelectedItem = Category.None;
             ProductInformationFill();
         }
 
         private void BuyProductBtn_Click(object sender, EventArgs e)
         {
-            if (ProductListBx.SelectedItem != null)
+            if (ProductListBx.SelectedItem != null && !string.IsNullOrWhiteSpace(BuyProductCountMskTxtBox.Text))
             {
                 try
                 {
                     var Product = (Product)ProductListBx.SelectedItem;
                     Shop.ProductBuy(Product, int.Parse(BuyProductCountMskTxtBox.Text));
+                    ProductCountTxt.Text = Shop.ReturnProductCount(Product).ToString();
+                    BuyProductCountMskTxtBox.Text = string.Empty;
+                    MoneyLb.Text = Shop.Money.ToString();
                 }
                 catch(Exception ex)
                 {
@@ -62,12 +70,15 @@ namespace Deadline5
 
         private void SellProductBtn_Click(object sender, EventArgs e)
         {
-            if (ProductListBx.SelectedItem != null)
+            if (ProductListBx.SelectedItem != null && !string.IsNullOrWhiteSpace(SellProductCountMskTxtBox.Text))
             {
                 try
                 {
                     var Product = (Product)ProductListBx.SelectedItem;
                     Shop.ProductSell(Product, int.Parse(SellProductCountMskTxtBox.Text));
+                    ProductCountTxt.Text = Shop.ReturnProductCount(Product).ToString();
+                    SellProductCountMskTxtBox.Text = string.Empty;
+                    MoneyLb.Text = Shop.Money.ToString();
                 }
                 catch(Exception ex)
                 {
@@ -80,6 +91,9 @@ namespace Deadline5
         {
             var Product = (Product)ProductListBx.SelectedItem;
             Shop.ProductAndProductCount.Remove(Product);
+            ProductListBx.DataSource = Shop.ProductAndProductCount.Keys.ToList();
+            ProductListBx.DisplayMember = "Name";
+            ProductListBx.ValueMember = "Name";
         }
 
         private void ProductAddBt_Click(object sender, EventArgs e)
@@ -103,9 +117,35 @@ namespace Deadline5
 
         private void MoneyAddBtn_Click(object sender, EventArgs e)
         {
-            Shop.Money += int.Parse(MoneyMskTxtBox.Text);
-            MoneyLb.Text = Shop.Money.ToString();
-            FileWorker.SaveMoney(Shop.Money);
+            if (!string.IsNullOrWhiteSpace(MoneyMskTxtBox.Text))
+            {
+                Shop.Money += int.Parse(MoneyMskTxtBox.Text);
+                MoneyLb.Text = Shop.Money.ToString();
+                FileWorker.SaveMoney(Shop.Money);
+            }
+        }
+
+        private void SortBtn_Click(object sender, EventArgs e)
+        {
+            ProductListBx.DataSource = Shop.ProductAndProductCount.Keys.ToList().SortName(NameOrderOnChkBx.Checked).SortCategory(CategoryOrderOnChkBx.Checked).SortPrice(PriceOrderOnChkBx.Checked);
+            ProductListBx.DisplayMember = "Name";
+            ProductListBx.ValueMember = "Name";
+        }
+
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+            int FromPrice = string.IsNullOrWhiteSpace(fromPriceMskTxtBx.Text) ? 0 : int.Parse(fromPriceMskTxtBx.Text);
+            int ToPrice = string.IsNullOrWhiteSpace(ToPriceMskTxtBx.Text) ? 0 : int.Parse(ToPriceMskTxtBx.Text);
+            var ProductSearchSelected = Shop.ProductAndProductCount.Keys.ToList().SearchName(NameSearchMskTxtBx.Text).SearchCategory((Category)CategoryCheckCmbBx.SelectedItem).SearchPrice(FromPrice,ToPrice);
+            ProductListBx.DataSource = ProductSearchSelected;
+            ProductListBx.DisplayMember = "Name";
+            ProductListBx.ValueMember = "Name";
+
+        }
+
+        private void SearchCleanBtn_Click(object sender, EventArgs e)
+        {
+            ProductListRefresh();
         }
     }
 }

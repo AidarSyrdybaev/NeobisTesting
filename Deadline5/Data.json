@@ -1,1 +1,7 @@
-[{"ProductJsonInformation":"{\"Name\":\"asdfads\",\"Price\":12,\"Category\":2}","Count":12}]
+[
+  
+  {
+    "ProductJsonInformation": "{\"Name\":\"a\",\"Price\":12,\"Category\":0}",
+    "Count": 0
+  }
+]

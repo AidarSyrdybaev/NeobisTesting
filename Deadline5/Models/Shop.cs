@@ -24,8 +24,11 @@ namespace Deadline5.Models
             {
                 Money += product.Price * ProductSellCount;
                 ProductAndProductCount[product] -= ProductSellCount;
+                FileWorker.SaveInformation(ProductAndProductCount);
+                FileWorker.SaveMoney(Money);
             }
-            throw new Exception("Нехватает продуктов");
+            else
+                throw new Exception("Нехватает продуктов");
         }
 
         public void ProductBuy(Product product, int ProductBuyCount)
@@ -34,6 +37,8 @@ namespace Deadline5.Models
             {
                 Money -= product.Price * ProductBuyCount;
                 ProductAndProductCount[product] += ProductBuyCount;
+                FileWorker.SaveInformation(ProductAndProductCount);
+                FileWorker.SaveMoney(Money);
             }
             else
             {
@@ -44,11 +49,18 @@ namespace Deadline5.Models
         public void DeleteProduct(Product product)
         {
             ProductAndProductCount.Remove(product);
+            FileWorker.SaveInformation(ProductAndProductCount);
         }
 
         public void AddProduct(Product product)
         {
             ProductAndProductCount.Add(product, 0);
+            FileWorker.SaveInformation(ProductAndProductCount);
+        }
+
+        public int ReturnProductCount(Product product)
+        {
+            return ProductAndProductCount[product];
         }
     }
 }

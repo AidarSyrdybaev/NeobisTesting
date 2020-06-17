@@ -22,15 +22,14 @@ namespace Deadline5
 
         private void AddForm_Load(object sender, EventArgs e)
         {
-            CategoryCheckedListBox.Items.Add(Category.Accessories);
-            CategoryCheckedListBox.Items.Add(Category.Food);
-            CategoryCheckedListBox.Items.Add(Category.Technic);
+            CategoryCheckCmbBx.Items.Add(Category.Accessories);
+            CategoryCheckCmbBx.Items.Add(Category.Food);
+            CategoryCheckCmbBx.Items.Add(Category.Technic);
         }
 
         private void ProductAddBtn_Click(object sender, EventArgs e)
         {
-            Form1.Shop.ProductAndProductCount.Add(new Product(ProductNameMskdTxtBx.Text, int.Parse(ProductPriceMskTxtBx.Text), (Category)CategoryCheckedListBox.SelectedItem), 0);
-            FileWorker.SaveInformation(Form1.Shop.ProductAndProductCount);
+            Form1.Shop.AddProduct(new Product(ProductNameMskdTxtBx.Text, int.Parse(ProductPriceMskTxtBx.Text), (Category)CategoryCheckCmbBx.SelectedItem));
             Form1.ProductListRefresh();
             Close();
         }

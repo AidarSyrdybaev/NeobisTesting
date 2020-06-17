@@ -10,7 +10,8 @@ namespace Deadline5.Models
     { 
         Food,
         Technic,
-        Accessories
+        Accessories,
+        None
     }   
     public class Product
     {   

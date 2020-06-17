@@ -30,11 +30,11 @@
         {
             this.ProductNameMskdTxtBx = new System.Windows.Forms.MaskedTextBox();
             this.ProductPriceMskTxtBx = new System.Windows.Forms.MaskedTextBox();
-            this.CategoryCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.ProductAddBtn = new System.Windows.Forms.Button();
+            this.CategoryCheckCmbBx = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // ProductNameMskdTxtBx
@@ -52,14 +52,6 @@
             this.ProductPriceMskTxtBx.Size = new System.Drawing.Size(120, 20);
             this.ProductPriceMskTxtBx.TabIndex = 1;
             this.ProductPriceMskTxtBx.ValidatingType = typeof(int);
-            // 
-            // CategoryCheckedListBox
-            // 
-            this.CategoryCheckedListBox.FormattingEnabled = true;
-            this.CategoryCheckedListBox.Location = new System.Drawing.Point(8, 122);
-            this.CategoryCheckedListBox.Name = "CategoryCheckedListBox";
-            this.CategoryCheckedListBox.Size = new System.Drawing.Size(120, 79);
-            this.CategoryCheckedListBox.TabIndex = 2;
             // 
             // label1
             // 
@@ -90,7 +82,7 @@
             // 
             // ProductAddBtn
             // 
-            this.ProductAddBtn.Location = new System.Drawing.Point(26, 218);
+            this.ProductAddBtn.Location = new System.Drawing.Point(12, 178);
             this.ProductAddBtn.Name = "ProductAddBtn";
             this.ProductAddBtn.Size = new System.Drawing.Size(75, 42);
             this.ProductAddBtn.TabIndex = 6;
@@ -98,16 +90,24 @@
             this.ProductAddBtn.UseVisualStyleBackColor = true;
             this.ProductAddBtn.Click += new System.EventHandler(this.ProductAddBtn_Click);
             // 
+            // CategoryCheckCmbBx
+            // 
+            this.CategoryCheckCmbBx.FormattingEnabled = true;
+            this.CategoryCheckCmbBx.Location = new System.Drawing.Point(8, 135);
+            this.CategoryCheckCmbBx.Name = "CategoryCheckCmbBx";
+            this.CategoryCheckCmbBx.Size = new System.Drawing.Size(121, 21);
+            this.CategoryCheckCmbBx.TabIndex = 41;
+            // 
             // AddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(329, 450);
+            this.Controls.Add(this.CategoryCheckCmbBx);
             this.Controls.Add(this.ProductAddBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.CategoryCheckedListBox);
             this.Controls.Add(this.ProductPriceMskTxtBx);
             this.Controls.Add(this.ProductNameMskdTxtBx);
             this.Name = "AddForm";
@@ -122,10 +122,10 @@
 
         private System.Windows.Forms.MaskedTextBox ProductNameMskdTxtBx;
         private System.Windows.Forms.MaskedTextBox ProductPriceMskTxtBx;
-        private System.Windows.Forms.CheckedListBox CategoryCheckedListBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button ProductAddBtn;
+        private System.Windows.Forms.ComboBox CategoryCheckCmbBx;
     }
 }

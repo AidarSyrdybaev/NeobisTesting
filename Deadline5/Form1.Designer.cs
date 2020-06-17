@@ -40,17 +40,34 @@
             this.ProductPriceLb = new System.Windows.Forms.Label();
             this.ProductCategoryLb = new System.Windows.Forms.Label();
             this.ProductInformationPanel = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ProductPriceTxt = new System.Windows.Forms.Label();
-            this.ProductCategoryTxt = new System.Windows.Forms.Label();
-            this.ProductCountTxt = new System.Windows.Forms.Label();
             this.ProductNameTxt = new System.Windows.Forms.Label();
-            this.ProductRemoveBt = new System.Windows.Forms.Button();
+            this.ProductCountTxt = new System.Windows.Forms.Label();
+            this.ProductCategoryTxt = new System.Windows.Forms.Label();
+            this.ProductPriceTxt = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ProductAddBt = new System.Windows.Forms.Button();
+            this.ProductRemoveBt = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.MoneyLb = new System.Windows.Forms.Label();
             this.MoneyMskTxtBox = new System.Windows.Forms.MaskedTextBox();
             this.MoneyAddBtn = new System.Windows.Forms.Button();
+            this.NameOrderOnChkBx = new System.Windows.Forms.CheckBox();
+            this.PriceOrderOnChkBx = new System.Windows.Forms.CheckBox();
+            this.CategoryOrderOnChkBx = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.SortBtn = new System.Windows.Forms.Button();
+            this.NameSearchMskTxtBx = new System.Windows.Forms.MaskedTextBox();
+            this.ToPriceMskTxtBx = new System.Windows.Forms.MaskedTextBox();
+            this.fromPriceMskTxtBx = new System.Windows.Forms.MaskedTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.CategoryCheckCmbBx = new System.Windows.Forms.ComboBox();
+            this.SearchBtn = new System.Windows.Forms.Button();
+            this.SearchCleanBtn = new System.Windows.Forms.Button();
             this.ProductInformationPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -123,9 +140,9 @@
             // ProductListBx
             // 
             this.ProductListBx.FormattingEnabled = true;
-            this.ProductListBx.Location = new System.Drawing.Point(24, 12);
+            this.ProductListBx.Location = new System.Drawing.Point(38, 243);
             this.ProductListBx.Name = "ProductListBx";
-            this.ProductListBx.Size = new System.Drawing.Size(372, 264);
+            this.ProductListBx.Size = new System.Drawing.Size(372, 121);
             this.ProductListBx.TabIndex = 12;
             this.ProductListBx.Click += new System.EventHandler(this.ProductListBx_Click);
             // 
@@ -166,10 +183,42 @@
             this.ProductInformationPanel.Controls.Add(this.ProductNameLb);
             this.ProductInformationPanel.Controls.Add(this.ProductCategoryLb);
             this.ProductInformationPanel.Controls.Add(this.ProductPriceLb);
-            this.ProductInformationPanel.Location = new System.Drawing.Point(416, 12);
+            this.ProductInformationPanel.Location = new System.Drawing.Point(484, 12);
             this.ProductInformationPanel.Name = "ProductInformationPanel";
             this.ProductInformationPanel.Size = new System.Drawing.Size(245, 123);
             this.ProductInformationPanel.TabIndex = 16;
+            // 
+            // ProductNameTxt
+            // 
+            this.ProductNameTxt.AutoSize = true;
+            this.ProductNameTxt.Location = new System.Drawing.Point(143, 23);
+            this.ProductNameTxt.Name = "ProductNameTxt";
+            this.ProductNameTxt.Size = new System.Drawing.Size(0, 13);
+            this.ProductNameTxt.TabIndex = 19;
+            // 
+            // ProductCountTxt
+            // 
+            this.ProductCountTxt.AutoSize = true;
+            this.ProductCountTxt.Location = new System.Drawing.Point(143, 91);
+            this.ProductCountTxt.Name = "ProductCountTxt";
+            this.ProductCountTxt.Size = new System.Drawing.Size(0, 13);
+            this.ProductCountTxt.TabIndex = 18;
+            // 
+            // ProductCategoryTxt
+            // 
+            this.ProductCategoryTxt.AutoSize = true;
+            this.ProductCategoryTxt.Location = new System.Drawing.Point(143, 68);
+            this.ProductCategoryTxt.Name = "ProductCategoryTxt";
+            this.ProductCategoryTxt.Size = new System.Drawing.Size(0, 13);
+            this.ProductCategoryTxt.TabIndex = 17;
+            // 
+            // ProductPriceTxt
+            // 
+            this.ProductPriceTxt.AutoSize = true;
+            this.ProductPriceTxt.Location = new System.Drawing.Point(143, 45);
+            this.ProductPriceTxt.Name = "ProductPriceTxt";
+            this.ProductPriceTxt.Size = new System.Drawing.Size(0, 13);
+            this.ProductPriceTxt.TabIndex = 16;
             // 
             // groupBox1
             // 
@@ -181,54 +230,12 @@
             this.groupBox1.Controls.Add(this.SellProductCountMskTxtBox);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.BuyProductBtn);
-            this.groupBox1.Location = new System.Drawing.Point(416, 155);
+            this.groupBox1.Location = new System.Drawing.Point(484, 155);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 283);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Операции с продуктом";
-            // 
-            // ProductPriceTxt
-            // 
-            this.ProductPriceTxt.AutoSize = true;
-            this.ProductPriceTxt.Location = new System.Drawing.Point(143, 45);
-            this.ProductPriceTxt.Name = "ProductPriceTxt";
-            this.ProductPriceTxt.Size = new System.Drawing.Size(0, 13);
-            this.ProductPriceTxt.TabIndex = 16;
-            // 
-            // ProductCategoryTxt
-            // 
-            this.ProductCategoryTxt.AutoSize = true;
-            this.ProductCategoryTxt.Location = new System.Drawing.Point(143, 68);
-            this.ProductCategoryTxt.Name = "ProductCategoryTxt";
-            this.ProductCategoryTxt.Size = new System.Drawing.Size(0, 13);
-            this.ProductCategoryTxt.TabIndex = 17;
-            // 
-            // ProductCountTxt
-            // 
-            this.ProductCountTxt.AutoSize = true;
-            this.ProductCountTxt.Location = new System.Drawing.Point(143, 91);
-            this.ProductCountTxt.Name = "ProductCountTxt";
-            this.ProductCountTxt.Size = new System.Drawing.Size(0, 13);
-            this.ProductCountTxt.TabIndex = 18;
-            // 
-            // ProductNameTxt
-            // 
-            this.ProductNameTxt.AutoSize = true;
-            this.ProductNameTxt.Location = new System.Drawing.Point(143, 23);
-            this.ProductNameTxt.Name = "ProductNameTxt";
-            this.ProductNameTxt.Size = new System.Drawing.Size(0, 13);
-            this.ProductNameTxt.TabIndex = 19;
-            // 
-            // ProductRemoveBt
-            // 
-            this.ProductRemoveBt.Location = new System.Drawing.Point(116, 209);
-            this.ProductRemoveBt.Name = "ProductRemoveBt";
-            this.ProductRemoveBt.Size = new System.Drawing.Size(75, 41);
-            this.ProductRemoveBt.TabIndex = 12;
-            this.ProductRemoveBt.Text = "Удалить продукт";
-            this.ProductRemoveBt.UseVisualStyleBackColor = true;
-            this.ProductRemoveBt.Click += new System.EventHandler(this.ProductRemoveBt_Click);
             // 
             // ProductAddBt
             // 
@@ -240,10 +247,20 @@
             this.ProductAddBt.UseVisualStyleBackColor = true;
             this.ProductAddBt.Click += new System.EventHandler(this.ProductAddBt_Click);
             // 
+            // ProductRemoveBt
+            // 
+            this.ProductRemoveBt.Location = new System.Drawing.Point(116, 209);
+            this.ProductRemoveBt.Name = "ProductRemoveBt";
+            this.ProductRemoveBt.Size = new System.Drawing.Size(75, 41);
+            this.ProductRemoveBt.TabIndex = 12;
+            this.ProductRemoveBt.Text = "Удалить продукт";
+            this.ProductRemoveBt.UseVisualStyleBackColor = true;
+            this.ProductRemoveBt.Click += new System.EventHandler(this.ProductRemoveBt_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 281);
+            this.label3.Location = new System.Drawing.Point(35, 378);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(147, 13);
             this.label3.TabIndex = 17;
@@ -252,21 +269,21 @@
             // MoneyLb
             // 
             this.MoneyLb.AutoSize = true;
-            this.MoneyLb.Location = new System.Drawing.Point(218, 281);
+            this.MoneyLb.Location = new System.Drawing.Point(205, 378);
             this.MoneyLb.Name = "MoneyLb";
             this.MoneyLb.Size = new System.Drawing.Size(0, 13);
             this.MoneyLb.TabIndex = 18;
             // 
             // MoneyMskTxtBox
             // 
-            this.MoneyMskTxtBox.Location = new System.Drawing.Point(151, 316);
+            this.MoneyMskTxtBox.Location = new System.Drawing.Point(138, 408);
             this.MoneyMskTxtBox.Name = "MoneyMskTxtBox";
             this.MoneyMskTxtBox.Size = new System.Drawing.Size(100, 20);
             this.MoneyMskTxtBox.TabIndex = 19;
             // 
             // MoneyAddBtn
             // 
-            this.MoneyAddBtn.Location = new System.Drawing.Point(58, 304);
+            this.MoneyAddBtn.Location = new System.Drawing.Point(38, 396);
             this.MoneyAddBtn.Name = "MoneyAddBtn";
             this.MoneyAddBtn.Size = new System.Drawing.Size(75, 42);
             this.MoneyAddBtn.TabIndex = 20;
@@ -274,18 +291,191 @@
             this.MoneyAddBtn.UseVisualStyleBackColor = true;
             this.MoneyAddBtn.Click += new System.EventHandler(this.MoneyAddBtn_Click);
             // 
+            // NameOrderOnChkBx
+            // 
+            this.NameOrderOnChkBx.AutoSize = true;
+            this.NameOrderOnChkBx.Location = new System.Drawing.Point(38, 31);
+            this.NameOrderOnChkBx.Name = "NameOrderOnChkBx";
+            this.NameOrderOnChkBx.Size = new System.Drawing.Size(75, 17);
+            this.NameOrderOnChkBx.TabIndex = 24;
+            this.NameOrderOnChkBx.Text = "По имени";
+            this.NameOrderOnChkBx.UseVisualStyleBackColor = true;
+            // 
+            // PriceOrderOnChkBx
+            // 
+            this.PriceOrderOnChkBx.AutoSize = true;
+            this.PriceOrderOnChkBx.Location = new System.Drawing.Point(138, 31);
+            this.PriceOrderOnChkBx.Name = "PriceOrderOnChkBx";
+            this.PriceOrderOnChkBx.Size = new System.Drawing.Size(67, 17);
+            this.PriceOrderOnChkBx.TabIndex = 25;
+            this.PriceOrderOnChkBx.Text = "По цене";
+            this.PriceOrderOnChkBx.UseVisualStyleBackColor = true;
+            // 
+            // CategoryOrderOnChkBx
+            // 
+            this.CategoryOrderOnChkBx.AutoSize = true;
+            this.CategoryOrderOnChkBx.Location = new System.Drawing.Point(233, 31);
+            this.CategoryOrderOnChkBx.Name = "CategoryOrderOnChkBx";
+            this.CategoryOrderOnChkBx.Size = new System.Drawing.Size(95, 17);
+            this.CategoryOrderOnChkBx.TabIndex = 26;
+            this.CategoryOrderOnChkBx.Text = "По категории";
+            this.CategoryOrderOnChkBx.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(48, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 13);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Сортировка:";
+            // 
+            // SortBtn
+            // 
+            this.SortBtn.Location = new System.Drawing.Point(43, 52);
+            this.SortBtn.Name = "SortBtn";
+            this.SortBtn.Size = new System.Drawing.Size(88, 23);
+            this.SortBtn.TabIndex = 28;
+            this.SortBtn.Text = "Сортировать";
+            this.SortBtn.UseVisualStyleBackColor = true;
+            this.SortBtn.Click += new System.EventHandler(this.SortBtn_Click);
+            // 
+            // NameSearchMskTxtBx
+            // 
+            this.NameSearchMskTxtBx.Location = new System.Drawing.Point(38, 129);
+            this.NameSearchMskTxtBx.Name = "NameSearchMskTxtBx";
+            this.NameSearchMskTxtBx.Size = new System.Drawing.Size(100, 20);
+            this.NameSearchMskTxtBx.TabIndex = 31;
+            // 
+            // ToPriceMskTxtBx
+            // 
+            this.ToPriceMskTxtBx.Location = new System.Drawing.Point(199, 155);
+            this.ToPriceMskTxtBx.Mask = "00000000";
+            this.ToPriceMskTxtBx.Name = "ToPriceMskTxtBx";
+            this.ToPriceMskTxtBx.Size = new System.Drawing.Size(75, 20);
+            this.ToPriceMskTxtBx.TabIndex = 32;
+            this.ToPriceMskTxtBx.ValidatingType = typeof(int);
+            // 
+            // fromPriceMskTxtBx
+            // 
+            this.fromPriceMskTxtBx.Location = new System.Drawing.Point(199, 129);
+            this.fromPriceMskTxtBx.Mask = "00000000";
+            this.fromPriceMskTxtBx.Name = "fromPriceMskTxtBx";
+            this.fromPriceMskTxtBx.Size = new System.Drawing.Size(75, 20);
+            this.fromPriceMskTxtBx.TabIndex = 33;
+            this.fromPriceMskTxtBx.ValidatingType = typeof(int);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(48, 87);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(172, 13);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Поиск продукта по параметрам:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(314, 113);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 13);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "По Категории:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(170, 129);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(23, 13);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "От:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(206, 113);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 13);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "По цене:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(170, 158);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(25, 13);
+            this.label9.TabIndex = 38;
+            this.label9.Text = "До:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(40, 110);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(56, 13);
+            this.label10.TabIndex = 39;
+            this.label10.Text = "По имени";
+            // 
+            // CategoryCheckCmbBx
+            // 
+            this.CategoryCheckCmbBx.FormattingEnabled = true;
+            this.CategoryCheckCmbBx.Location = new System.Drawing.Point(317, 129);
+            this.CategoryCheckCmbBx.Name = "CategoryCheckCmbBx";
+            this.CategoryCheckCmbBx.Size = new System.Drawing.Size(121, 21);
+            this.CategoryCheckCmbBx.TabIndex = 40;
+            // 
+            // SearchBtn
+            // 
+            this.SearchBtn.Location = new System.Drawing.Point(43, 194);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(75, 23);
+            this.SearchBtn.TabIndex = 41;
+            this.SearchBtn.Text = "Поиск";
+            this.SearchBtn.UseVisualStyleBackColor = true;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
+            // 
+            // SearchCleanBtn
+            // 
+            this.SearchCleanBtn.Location = new System.Drawing.Point(145, 194);
+            this.SearchCleanBtn.Name = "SearchCleanBtn";
+            this.SearchCleanBtn.Size = new System.Drawing.Size(183, 23);
+            this.SearchCleanBtn.TabIndex = 42;
+            this.SearchCleanBtn.Text = "Обнулить условия поиска";
+            this.SearchCleanBtn.UseVisualStyleBackColor = true;
+            this.SearchCleanBtn.Click += new System.EventHandler(this.SearchCleanBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SearchCleanBtn);
+            this.Controls.Add(this.SearchBtn);
+            this.Controls.Add(this.CategoryCheckCmbBx);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.fromPriceMskTxtBx);
+            this.Controls.Add(this.ProductListBx);
+            this.Controls.Add(this.ToPriceMskTxtBx);
+            this.Controls.Add(this.NameSearchMskTxtBx);
+            this.Controls.Add(this.SortBtn);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.CategoryOrderOnChkBx);
+            this.Controls.Add(this.PriceOrderOnChkBx);
+            this.Controls.Add(this.NameOrderOnChkBx);
             this.Controls.Add(this.MoneyAddBtn);
             this.Controls.Add(this.MoneyMskTxtBox);
             this.Controls.Add(this.MoneyLb);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.ProductInformationPanel);
-            this.Controls.Add(this.ProductListBx);
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
@@ -323,6 +513,23 @@
         private System.Windows.Forms.Label MoneyLb;
         private System.Windows.Forms.MaskedTextBox MoneyMskTxtBox;
         private System.Windows.Forms.Button MoneyAddBtn;
+        private System.Windows.Forms.CheckBox NameOrderOnChkBx;
+        private System.Windows.Forms.CheckBox PriceOrderOnChkBx;
+        private System.Windows.Forms.CheckBox CategoryOrderOnChkBx;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button SortBtn;
+        private System.Windows.Forms.MaskedTextBox NameSearchMskTxtBx;
+        private System.Windows.Forms.MaskedTextBox ToPriceMskTxtBx;
+        private System.Windows.Forms.MaskedTextBox fromPriceMskTxtBx;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox CategoryCheckCmbBx;
+        private System.Windows.Forms.Button SearchBtn;
+        private System.Windows.Forms.Button SearchCleanBtn;
     }
 }
 
