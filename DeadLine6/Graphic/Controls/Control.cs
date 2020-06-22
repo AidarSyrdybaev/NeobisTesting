@@ -37,6 +37,14 @@ namespace DeadLine6.Graphic.Controls
             
         }
 
+        public virtual void SetControlsNav(Control _controlLeft, Control _controlRight, Control _controlUp, Control _controlDown)
+        {
+            ControlLeft = _controlLeft;
+            ControlRight = _controlRight;
+            ControlUp = _controlUp;
+            ControlDown = _controlDown;
+        }
+
         public virtual void Clear()
         {
             Console.SetCursorPosition(Point.PositionX, Point.PositionY);

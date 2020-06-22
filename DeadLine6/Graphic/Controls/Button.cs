@@ -12,9 +12,9 @@ namespace DeadLine6.Graphic.Controls
         public Action ButtonPressEvent{ get; set; }
 
 
-        public Button(Point point): base(point)
+        public Button(Point point, string Text): base(point)
         {
-
+            TxtValue = Text;
         }
 
         public override void Action()
