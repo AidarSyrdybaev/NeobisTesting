@@ -59,5 +59,7 @@ namespace DeadLine6.Graphic.Controls
             Console.SetCursorPosition(SelectedControl.Point.PositionX - 3, SelectedControl.Point.PositionY);
             Console.Write(" ");
         }
+
+        public override 
     }
 }

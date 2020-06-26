@@ -8,11 +8,15 @@ namespace DeadLine6.Graphic.Controls
     public class Button : Control
     {   
 
-        public string TxtValue { get; set; }
+        
         public Action ButtonPressEvent{ get; set; }
 
+        public Button(Point point) : base(point)
+        {
+           
+        }
 
-        public Button(Point point, string Text): base(point)
+        public Button(Point point, string Text): this(point)
         {
             TxtValue = Text;
         }

@@ -22,7 +22,7 @@ namespace DeadLine6.Graphic.Controls
         {
             base.Draw();
             Console.Clear();
-            Console.Write(Check);
+            Console.Write(TxtValue + " " + Check.ToString());
         }
 
         public override void Clear()

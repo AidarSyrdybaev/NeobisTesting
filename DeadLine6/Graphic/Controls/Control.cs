@@ -9,6 +9,8 @@ namespace DeadLine6.Graphic.Controls
     {
         public Point Point;
 
+        public string TxtValue { get; set; }
+
         public Control ControlLeft;
 
         public Control ControlRight;
@@ -48,6 +50,11 @@ namespace DeadLine6.Graphic.Controls
         public virtual void Clear()
         {
             Console.SetCursorPosition(Point.PositionX, Point.PositionY);
+        }
+
+        public virtual void InitializeControl()
+        { 
+
         }
     }
 }

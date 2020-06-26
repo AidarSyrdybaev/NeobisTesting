@@ -10,7 +10,7 @@ namespace DeadLine6.Graphic.Controls.Pages
     
         
 
-        public MainPage() : base()
+        public MainPage(JsonDatabaseContext jsonDatabaseContext) : base(jsonDatabaseContext)
         { 
         
         }

@@ -6,9 +6,10 @@ namespace DeadLine6.Graphic.Controls.Pages
 {
     public abstract class Page
     {
+        protected JsonDatabaseContext jsonDatabaseContext;
         protected Marker Marker;
         protected List<Control> controls;
-        public Page()
+        public Page(JsonDatabaseContext jsonDatabaseContext)
         {
             controls = new List<Control>();
             SetGraphics();
