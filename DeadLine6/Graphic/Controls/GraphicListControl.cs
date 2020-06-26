@@ -14,7 +14,8 @@ namespace DeadLine6.Graphic.Controls
     }
 
     public class GraphicListControl: Control
-    {
+    {   
+        
         public ListLine ListLine = ListLine.Vertical;
         public int RowInterval { get; set; }
         private Control ActiveControl;
@@ -23,20 +24,24 @@ namespace DeadLine6.Graphic.Controls
         {
             
         }
-        public GraphicListControl(Point point, List<String> _controlsTxt, ControlType controlType) : this(point)
+        public GraphicListControl(Point point, List<String> _controlsTxt, ControlType controlType, ListLine line) : this(point)
         {
-            
+            InitializeControls(_controlsTxt, controlType);
+            InitializeControl();
+            ListLine = line;
         }
 
         private void InitializeControls(List<String> controlsTxt, ControlType controlType)
         {
-            int XCount = ListLine == ListLine.Vertical ? 1 : 0;
-            int YCount = ListLine == ListLine.Horizontal ? 1 : 0;
+            int XCount = ListLine == ListLine.Horizontal ? 1 : 0;
+            int YCount = ListLine == ListLine.Vertical ? 1 : 0;
+            Controls = Enumerable.Range(0, controlsTxt.Count).Select(i =>
+                ControlExtensions.GetControlTypeObject(controlType, new Point(Point.PositionX + i * XCount, Point.PositionX + i * YCount))).ToList();
+            int Count = 0;
             foreach (var text in controlsTxt)
             {
-
-                Controls = Enumerable.Range(0, controlsTxt.Count).Select(i =>
-                    ControlExtensions.GetControlTypeObject(controlType, new Point(Point.PositionX + i * XCount, Point.PositionX + i * YCount))).ToList();
+                Controls[Count].TxtValue = text;
+                Count++;
             }
 
         }
@@ -47,8 +52,8 @@ namespace DeadLine6.Graphic.Controls
             {
                 for (int i = 0; i < Controls.Count; i++)
                 {
-                    Controls[i].SetControlsNav(Controls[i], Controls[i], Controls[i == 0 ? Controls.Count - 2 : i - 1],
-                        Controls[i % (Controls.Count - 1) + 1]);
+                    Controls[i].SetControlsNav(Controls[i], Controls[i], Controls[i == 0 ? Controls.Count - 1 : i-1],
+                        Controls[(i+1) % Controls.Count]);
                 }
 
             }
@@ -56,15 +61,16 @@ namespace DeadLine6.Graphic.Controls
             {
                 for (int i = 0; i < Controls.Count; i++)
                 {
-                    Controls[i].SetControlsNav(Controls[i == 0 ? Controls.Count - 2 : i - 1],
-                        Controls[i % (Controls.Count - 1) + 1], Controls[i], Controls[i]);
+                    Controls[i].SetControlsNav(Controls[i == 0 ? Controls.Count - 1 : i - 1],
+                        Controls[i % (Controls.Count - 1)], Controls[i], Controls[i]);
                 }
             }
         }
 
         public override void Action()
         {
-
+            Marker marker = new Marker(Controls[0], "*");
+            marker.Action();
         }
 
         public override void Draw()
@@ -80,6 +86,15 @@ namespace DeadLine6.Graphic.Controls
                 Index++;
             }
             base.Draw();
+        }
+
+        public void AddActionToChildrenControl(string ControlTxtValue, Action action)
+        {
+            foreach (var control in Controls)
+            {
+                if (control.TxtValue == ControlTxtValue)
+                    control.ActionEvent = action;
+            }
         }
     }
 }

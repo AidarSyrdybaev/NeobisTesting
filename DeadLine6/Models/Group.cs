@@ -7,7 +7,12 @@ using System.Text;
 namespace DeadLine6.Models
 {
     public class Group: Entity
-    {
+    {   
+        public int? BossStudentId { get; set; }
+
+        [JsonIgnore]
+
+        public Student BosStudent { get; set; }
 
         public string GroupName { get; set;}
 

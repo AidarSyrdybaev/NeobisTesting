@@ -10,8 +10,9 @@ namespace DeadLine6
     class Program
     {
         static void Main(string[] args)
-        {
-            Page page = new MainPage();
+        {   
+            JsonDatabaseContext jsonDatabaseContext = new JsonDatabaseContext();
+            Page page = new MainPage(jsonDatabaseContext);
             page.Draw();
             page.Action();
         }

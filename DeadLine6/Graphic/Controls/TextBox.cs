@@ -45,6 +45,7 @@ namespace DeadLine6.Graphic.Controls
                     }
                     
                 }
+                base.Action();
             }
         }
 

@@ -6,6 +6,8 @@ namespace DeadLine6.Graphic.Controls.Pages
 {
     public abstract class Page
     {
+        public Page PreviousPage;
+        public List<Page> NextPages;
         protected JsonDatabaseContext jsonDatabaseContext;
         protected Marker Marker;
         protected List<Control> controls;
@@ -13,6 +15,11 @@ namespace DeadLine6.Graphic.Controls.Pages
         {
             controls = new List<Control>();
             SetGraphics();
+        }
+
+        public Page(Page page, JsonDatabaseContext jsonDatabaseContext) : this(jsonDatabaseContext)
+        {
+            PreviousPage = page;
         }
         public abstract void SetGraphics();
         public abstract void Draw();

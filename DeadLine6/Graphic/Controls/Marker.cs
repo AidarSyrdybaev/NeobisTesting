@@ -17,7 +17,7 @@ namespace DeadLine6.Graphic.Controls
         }
 
         public void Draw()
-        {
+        {   
             Console.SetCursorPosition(SelectedControl.Point.PositionX - 3, SelectedControl.Point.PositionY);
             Console.Write(Mark);
         }
@@ -60,6 +60,5 @@ namespace DeadLine6.Graphic.Controls
             Console.Write(" ");
         }
 
-        public override 
     }
 }

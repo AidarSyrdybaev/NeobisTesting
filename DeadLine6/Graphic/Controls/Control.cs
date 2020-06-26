@@ -19,6 +19,8 @@ namespace DeadLine6.Graphic.Controls
 
         public Control ControlDown;
 
+        public Action ActionEvent;
+
         public Control(Point _point)
         {
             Point = _point;
@@ -36,7 +38,7 @@ namespace DeadLine6.Graphic.Controls
 
         public virtual void Action()
         { 
-            
+            ActionEvent?.Invoke();
         }
 
         public virtual void SetControlsNav(Control _controlLeft, Control _controlRight, Control _controlUp, Control _controlDown)

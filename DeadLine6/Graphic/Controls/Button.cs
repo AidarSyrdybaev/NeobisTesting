@@ -9,7 +9,7 @@ namespace DeadLine6.Graphic.Controls
     {   
 
         
-        public Action ButtonPressEvent{ get; set; }
+        
 
         public Button(Point point) : base(point)
         {
@@ -23,7 +23,7 @@ namespace DeadLine6.Graphic.Controls
 
         public override void Action()
         {
-            ButtonPressEvent?.Invoke();
+            base.Action();
         }
 
         public override void Draw()

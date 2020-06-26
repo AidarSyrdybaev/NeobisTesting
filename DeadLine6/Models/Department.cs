@@ -7,6 +7,12 @@ namespace DeadLine6.Models
 {
     public class Department: Entity
     {   
+        public int? TeacherBossId { get; set; }
+
+        [JsonIgnore]
+
+        public Teacher BossTeacher { get; set; }
+
         public string DepartmentName { get; set; }
 
         public bool IsProfile { get; set; }

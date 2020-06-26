@@ -18,14 +18,8 @@ namespace DeadLine6.Graphic.Controls.Pages
         public override void SetGraphics()
         {   
             
-            controls.Add(new Button(new Point(50,2), "Добавить студента"));
-            controls.Add(new Button(new Point(50, 3), "Добавить группу"));
-            controls.Add(new Button(new Point(50, 4), "Добавить Кафедру"));
-            controls.Add(new Button(new Point(50, 5), "Добавить Учителя"));
-            controls[0].SetControlsNav(controls[0], controls[0], controls[3], controls[1]);
-            controls[1].SetControlsNav(controls[1], controls[1], controls[0], controls[2]);
-            controls[2].SetControlsNav(controls[2], controls[2], controls[1], controls[3]);
-            controls[3].SetControlsNav(controls[3], controls[3], controls[2], controls[0]);
+            GraphicListControl graphic = new GraphicListControl(new Point(5,5), new List<string> (new string[]{ "Создать группу", "Создать кафедру","Внести нового человека", "Внести студента", "Внести преподавателя", "Поиск"}), ControlType.Button, ListLine.Vertical);
+            controls.Add(graphic);
         }
         public override void Draw()
         {
@@ -39,6 +33,12 @@ namespace DeadLine6.Graphic.Controls.Pages
         {
             Marker marker = new Marker(controls[0], "*");
             marker.Action();
+        }
+
+        public void GotoDepartmentCreatePage()
+        {
+            Console.Clear();
+            
         }
     }
 }

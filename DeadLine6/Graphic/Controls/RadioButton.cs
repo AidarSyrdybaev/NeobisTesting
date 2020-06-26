@@ -16,6 +16,7 @@ namespace DeadLine6.Graphic.Controls
         public override void Action()
         {
             Check = !Check;
+            base.Action();
         }
 
         public override void Draw()
