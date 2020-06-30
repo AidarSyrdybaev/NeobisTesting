@@ -15,9 +15,7 @@ namespace DeadLine6.Graphic.Controls.Pages
 
         public override void Action()
         {
-            Marker marker = new Marker(controls[1], "*");
-            marker.Action();
-            Console.Clear();
+            base.Action();
         }
 
         public override void Draw()
@@ -32,17 +30,15 @@ namespace DeadLine6.Graphic.Controls.Pages
             TextBox DepartmentNameTxtBx = new TextBox(new Point(37, 4));
             RadioButton IsProfileChkBx = new RadioButton(new Point(37,5));
             Button DepartmentCreateBtn = new Button(new Point(37,6));
-            DepartmentNameTxtBx.SetControlsNav(DepartmentNameTxtBx, DepartmentNameTxtBx,DepartmentCreateBtn, IsProfileChkBx);
-            IsProfileChkBx.SetControlsNav(IsProfileChkBx, IsProfileChkBx,DepartmentNameTxtBx, DepartmentCreateBtn);
-            DepartmentCreateBtn.SetControlsNav(DepartmentCreateBtn,DepartmentCreateBtn, IsProfileChkBx, DepartmentNameTxtBx);
             DepartmentCreateBtn.ActionEvent = CreateDepartmentAction;
             DepartmentCreateBtn.TxtValue = "Создать кафедру";
             IsProfileChkBx.TxtValue = "Группа профильная";
-            controls.Add(labelMainMenu);
-            controls.Add(DepartmentNameTxtBx);
-            controls.Add(IsProfileChkBx);
-            controls.Add(DepartmentCreateBtn);
-            controls.Add(label);
+            DrawControls.Add(labelMainMenu);
+            UseControls.Add(DepartmentNameTxtBx);
+            DrawControls.Add(IsProfileChkBx);
+            UseControls.Add(DepartmentCreateBtn);
+            DrawControls.Add(label);
+            SetUseVerticalControlNavs();
             void CreateDepartmentAction()
             {
                 Department department = new Department { DepartmentName = DepartmentNameTxtBx.TxtValue, IsProfile = IsProfileChkBx.Check};

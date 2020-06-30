@@ -15,8 +15,7 @@ namespace DeadLine6.Graphic.Controls.Pages
 
         public override void Action()
         {
-            Marker marker = new Marker(controls[2], "*");
-            marker.Action();
+            base.Action();
         }
 
         public override void SetGraphics()
@@ -29,17 +28,14 @@ namespace DeadLine6.Graphic.Controls.Pages
             Button GroupCreateBtn = new Button(new Point(37, 6));
             GroupCreateBtn.TxtValue = "Создать группу";
             DepartmentIdTxtBx.LettersPad = false;
-            GroupNameTxtBx.SetControlsNav(GroupNameTxtBx, GroupNameTxtBx, GroupCreateBtn, DepartmentIdTxtBx);
-            DepartmentIdTxtBx.SetControlsNav(DepartmentIdTxtBx, DepartmentIdTxtBx, GroupCreateBtn, GroupCreateBtn);
-            GroupCreateBtn.SetControlsNav(GroupCreateBtn, GroupCreateBtn, DepartmentIdTxtBx, GroupNameTxtBx);
             GroupCreateBtn.ActionEvent = GroupCreateAction;
-            controls.Add(label);
-            controls.Add(labelMainMenu);
-            controls.Add(GroupNameTxtBx);
-            controls.Add(label2);
-            controls.Add(DepartmentIdTxtBx);
-            controls.Add(GroupCreateBtn);
-
+            DrawControls.Add(label);
+            DrawControls.Add(labelMainMenu);
+            UseControls.Add(GroupNameTxtBx);
+            DrawControls.Add(label2);
+            UseControls.Add(DepartmentIdTxtBx);
+            UseControls.Add(GroupCreateBtn);
+            SetUseVerticalControlNavs();
             void GroupCreateAction()
             {
                 Group group = new Group {DepartmentId = int.Parse(DepartmentIdTxtBx.TxtValue), GroupName = GroupNameTxtBx.TxtValue};

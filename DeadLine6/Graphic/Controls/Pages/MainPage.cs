@@ -19,8 +19,10 @@ namespace DeadLine6.Graphic.Controls.Pages
         {   
             Label labelMainMenu = new Label(new Point(2,2), "Основное меню:"); 
             GraphicListControl graphic = new GraphicListControl(new Point(7,3), new List<string> (new string[]{ "Создать группу", "Создать кафедру","Создать нового человека", "Внести студента", "Внести преподавателя", "Поиск"}), ControlType.Button, ListLine.Vertical);
-            controls.Add(graphic);
-            controls.Add(labelMainMenu);
+            UseControls.Add(graphic);
+            DrawControls.Add(labelMainMenu);
+
+            
         }
         public override void Draw()
         {
@@ -29,13 +31,12 @@ namespace DeadLine6.Graphic.Controls.Pages
 
         public override void Action()
         {
-            controls[0].Action();
+            UseControls[0].Action();
         }
 
         public void GotoDepartmentCreatePage()
         {
             Console.Clear();
-            
         }
     }
 }
