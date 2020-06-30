@@ -7,7 +7,7 @@ namespace DeadLine6.Models
 {
     public enum StudentPosition
     {   
-        Sudent,
+        Student,
         Elder
     }
     public class Student: Entity

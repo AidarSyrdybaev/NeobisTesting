@@ -16,7 +16,7 @@ namespace DeadLine6.Graphic.Controls
             TxtValue = string.Empty;
         }
 
-        public int SymbolLimit { get; set; }
+        public int SymbolLimit { get; set; } = 10;
 
         public override void Action()
         {
@@ -156,6 +156,12 @@ namespace DeadLine6.Graphic.Controls
 
         public override void Draw()
         {
+            base.Draw(-2, 0);
+            Console.Write(' ');
+            base.Draw(-1,0);
+            Console.Write('|');
+            base.Draw(SymbolLimit+1, 0);
+            Console.Write('|');
             base.Draw();
             Console.Write(new string(' ', TxtValue.Length+1));
             base.Draw();

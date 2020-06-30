@@ -12,7 +12,7 @@ namespace DeadLine6
         static void Main(string[] args)
         {   
             JsonDatabaseContext jsonDatabaseContext = new JsonDatabaseContext();
-            Page page = new MainPage(jsonDatabaseContext);
+            Page page = new GroupCreatePage(jsonDatabaseContext);
             page.Draw();
             page.Action();
         }

@@ -12,7 +12,7 @@ namespace DeadLine6.Models
 
         [JsonIgnore]
 
-        public Student BosStudent { get; set; }
+        public Student BossStudent { get; set; }
 
         public string GroupName { get; set;}
 

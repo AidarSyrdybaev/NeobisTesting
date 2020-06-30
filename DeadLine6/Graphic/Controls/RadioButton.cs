@@ -16,20 +16,21 @@ namespace DeadLine6.Graphic.Controls
         public override void Action()
         {
             Check = !Check;
+            Clear();
+            Draw();
             base.Action();
         }
 
         public override void Draw()
         {
             base.Draw();
-            Console.Clear();
             Console.Write(TxtValue + " " + Check.ToString());
         }
 
         public override void Clear()
         {
-            base.Clear();
-            Console.Write("     ");
+            base.Draw(TxtValue.Length, 0);
+            Console.Write("      ");
         }
     }
 }

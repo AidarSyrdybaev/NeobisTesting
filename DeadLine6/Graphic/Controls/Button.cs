@@ -29,7 +29,7 @@ namespace DeadLine6.Graphic.Controls
         public override void Draw()
         {   
             base.Draw();
-            Console.WriteLine(TxtValue);
+            Console.Write(TxtValue);
         }
     }
 }

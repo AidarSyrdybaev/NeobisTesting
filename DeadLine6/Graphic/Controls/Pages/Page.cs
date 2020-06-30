@@ -13,6 +13,7 @@ namespace DeadLine6.Graphic.Controls.Pages
         protected List<Control> controls;
         public Page(JsonDatabaseContext jsonDatabaseContext)
         {
+            this.jsonDatabaseContext = jsonDatabaseContext;
             controls = new List<Control>();
             SetGraphics();
         }
@@ -22,7 +23,15 @@ namespace DeadLine6.Graphic.Controls.Pages
             PreviousPage = page;
         }
         public abstract void SetGraphics();
-        public abstract void Draw();
+
+        public virtual void Draw()
+        {
+            foreach (var control in controls)
+            {
+                control.Draw();
+            }
+        }
+
         public abstract void Action();
     }
 }

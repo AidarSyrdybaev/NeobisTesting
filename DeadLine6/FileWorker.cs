@@ -12,7 +12,7 @@ namespace DeadLine6
         public static List<T> GetObjects<T>(string Path)
         {
             string content = File.ReadAllText(Path);
-            if (!string.IsNullOrEmpty(content) || !string.IsNullOrWhiteSpace(content))
+            if (string.IsNullOrEmpty(content) || string.IsNullOrWhiteSpace(content))
                 return new List<T>();
             return JsonConvert.DeserializeObject<List<T>>(content);
         }

@@ -49,6 +49,14 @@ namespace DeadLine6.Graphic.Controls
             ControlDown = _controlDown;
         }
 
+        public virtual void DeleteControlsNav()
+        {
+            ControlLeft = this;
+            ControlRight = this;
+            ControlUp = this;
+            ControlDown = this;
+        }
+
         public virtual void Clear()
         {
             Console.SetCursorPosition(Point.PositionX, Point.PositionY);

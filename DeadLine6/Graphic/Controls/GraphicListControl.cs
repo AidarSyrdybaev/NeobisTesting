@@ -36,7 +36,7 @@ namespace DeadLine6.Graphic.Controls
             int XCount = ListLine == ListLine.Horizontal ? 1 : 0;
             int YCount = ListLine == ListLine.Vertical ? 1 : 0;
             Controls = Enumerable.Range(0, controlsTxt.Count).Select(i =>
-                ControlExtensions.GetControlTypeObject(controlType, new Point(Point.PositionX + i * XCount, Point.PositionX + i * YCount))).ToList();
+                ControlExtensions.GetControlTypeObject(controlType, new Point(Point.PositionX + i * XCount, Point.PositionY + i * YCount))).ToList();
             int Count = 0;
             foreach (var text in controlsTxt)
             {
@@ -80,7 +80,7 @@ namespace DeadLine6.Graphic.Controls
             int Index = 1;
             foreach (var Control in Controls)
             {   
-                Control.Draw(-3,0);
+                Control.Draw(-5,0);
                 Console.Write(Index);
                 Control.Draw();
                 Index++;

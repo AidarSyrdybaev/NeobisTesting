@@ -17,22 +17,19 @@ namespace DeadLine6.Graphic.Controls.Pages
 
         public override void SetGraphics()
         {   
-            
-            GraphicListControl graphic = new GraphicListControl(new Point(5,5), new List<string> (new string[]{ "Создать группу", "Создать кафедру","Внести нового человека", "Внести студента", "Внести преподавателя", "Поиск"}), ControlType.Button, ListLine.Vertical);
+            Label labelMainMenu = new Label(new Point(2,2), "Основное меню:"); 
+            GraphicListControl graphic = new GraphicListControl(new Point(7,3), new List<string> (new string[]{ "Создать группу", "Создать кафедру","Создать нового человека", "Внести студента", "Внести преподавателя", "Поиск"}), ControlType.Button, ListLine.Vertical);
             controls.Add(graphic);
+            controls.Add(labelMainMenu);
         }
         public override void Draw()
         {
-            foreach (var control in controls)
-            {
-                control.Draw();   
-            }
+            base.Draw();
         }
 
         public override void Action()
         {
-            Marker marker = new Marker(controls[0], "*");
-            marker.Action();
+            controls[0].Action();
         }
 
         public void GotoDepartmentCreatePage()
