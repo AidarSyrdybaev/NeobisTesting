@@ -10,6 +10,6 @@ namespace DeadLine6.Graphic.Tables
     {
         private Table<Human> table { get; set; }
 
-        public 
+ 
     }
 }
