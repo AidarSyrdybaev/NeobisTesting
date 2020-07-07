@@ -12,7 +12,5 @@ namespace DeadLine6.Graphic.Controls
         RadioButton,
         Table,
         TextBox,
-        
-
     }
 }
