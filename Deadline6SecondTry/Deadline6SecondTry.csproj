@@ -65,11 +65,23 @@
     <Compile Include="Forms\CafedreForm.Designer.cs">
       <DependentUpon>CafedreForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Create\CafedreCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Create\CafedreCreateForm.Designer.cs">
+      <DependentUpon>CafedreCreateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Create\DepartmentCreateForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Create\DepartmentCreateForm.Designer.cs">
       <DependentUpon>DepartmentCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Create\TeacherCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Create\TeacherCreateForm.Designer.cs">
+      <DependentUpon>TeacherCreateForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\DepartmentForm.cs">
       <SubType>Form</SubType>
@@ -116,8 +128,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Create\CafedreCreateForm.resx">
+      <DependentUpon>CafedreCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Create\DepartmentCreateForm.resx">
       <DependentUpon>DepartmentCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Create\TeacherCreateForm.resx">
+      <DependentUpon>TeacherCreateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DepartmentForm.resx">
       <DependentUpon>DepartmentForm.cs</DependentUpon>
@@ -127,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StudentForm.resx">
       <DependentUpon>StudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TeacherForm.resx">
+      <DependentUpon>TeacherForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

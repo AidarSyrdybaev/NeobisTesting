@@ -7,27 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Deadline6SecondTry.Entities;
 
 namespace Deadline6SecondTry.Forms.Create
 {
-    public partial class DepartmentCreateForm : Form
+    public partial class CafedreCreateForm : Form
     {
         private JsonDatabaseContext _jsonDatabaseContext;
 
-        public DepartmentCreateForm(JsonDatabaseContext jsonDatabaseContext)
+        public CafedreCreateForm(JsonDatabaseContext jsonDatabaseContext)
         {
             _jsonDatabaseContext = jsonDatabaseContext;
             InitializeComponent();
         }
 
-        private void DepartmentCreateBtn_Click(object sender, EventArgs e)
+        private void CafedreCreateForm_Load(object sender, EventArgs e)
         {
-            var Department = new Department {DepartmentName = DepartmentNameTxtBx.Text};
-            _jsonDatabaseContext.Departments.Create(Department);
+
         }
 
-        private void DepartmentCreateForm_Load(object sender, EventArgs e)
+        private void CafedreCreateBtn_Click(object sender, EventArgs e)
         {
 
         }

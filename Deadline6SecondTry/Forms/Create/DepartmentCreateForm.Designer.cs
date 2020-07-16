@@ -59,7 +59,7 @@
             this.DepartmentCreateBtn.UseVisualStyleBackColor = true;
             this.DepartmentCreateBtn.Click += new System.EventHandler(this.DepartmentCreateBtn_Click);
             // 
-            // DepartmentCreate
+            // DepartmentCreateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -67,8 +67,9 @@
             this.Controls.Add(this.DepartmentCreateBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DepartmentNameTxtBx);
-            this.Name = "DepartmentCreate";
+            this.Name = "DepartmentCreateForm";
             this.Text = "DepartmentCreate";
+            this.Load += new System.EventHandler(this.DepartmentCreateForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
