@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeadLine6", "DeadLine6\Dead
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deadline6SecondTry", "Deadline6SecondTry\Deadline6SecondTry.csproj", "{D192C116-44FD-4616-A633-200C4BED1BED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleDeadLine6", "ConsoleDeadLine6\ConsoleDeadLine6.csproj", "{8889549C-1529-4BB7-9D7D-A0A59C4846B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D192C116-44FD-4616-A633-200C4BED1BED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D192C116-44FD-4616-A633-200C4BED1BED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D192C116-44FD-4616-A633-200C4BED1BED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8889549C-1529-4BB7-9D7D-A0A59C4846B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8889549C-1529-4BB7-9D7D-A0A59C4846B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8889549C-1529-4BB7-9D7D-A0A59C4846B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8889549C-1529-4BB7-9D7D-A0A59C4846B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
