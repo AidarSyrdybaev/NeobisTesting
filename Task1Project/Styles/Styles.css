@@ -1,0 +1,405 @@
+body
+{
+    font-family: "Gilroy";
+}
+
+.container
+{
+	margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 1170px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo
+{
+    font-family: "Homemade Apple";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+nav .nav-div
+{
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-items
+{
+    display: flex;
+    margin: 0 1em 0 1em;
+    padding: 0px;
+}
+
+.gift-link
+{   
+    display: flex;
+    
+    border: 1px solid #F7941E;
+
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    margin-top: 50px;
+    border-radius: 10px;
+
+}
+
+.prew-find-link
+{   
+    display: flex;
+    border: 1px solid #F7941E;
+    justify-content: start;
+    width: fit-content;
+    align-items: center;
+    background-color: #F7941E;
+    padding: 10px 10px 10px 10px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.prew-find-link a
+{
+    text-decoration: none;
+    color: white;
+
+}
+
+.gift-link a
+{
+    text-decoration: none;
+    color:  #F7941E;
+}
+
+.preview-section
+{   
+
+    display: flex;
+    flex-direction: row;
+}
+
+.preview-content-1
+{
+    margin: -80% 25% 0 25%;
+}
+
+.preview-content-2
+{
+    margin: -80% 25% 0 25%;
+}
+
+.preview-content-header-text
+{       
+    font-weight: bold;
+    font-size: 39px;
+    
+}
+
+.preview-content-big-text
+{       
+    font-size: 30px;
+}
+
+.preview-photo1
+{   
+    background-image: url("../Photos/FIrstPhoto.jfif");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.preview-photo2
+{
+    background-image: url("../Photos/SecondPhoto.jfif");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.square {
+    width: 50%;
+    height: 0;
+    padding-top: 50%;
+  }
+
+.preview-content-2 .gift-link
+{
+    justify-content: start;
+    width: fit-content;
+}
+
+.gift-functions-section
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gift-functions-content
+{
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.functions
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.function-cards
+{
+    margin: 0 10px;
+}
+.function-image
+{
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 270px;
+    height: 270px;
+}
+
+.function-image-1
+{
+    background-image: url("../Photos/birthday-function.jfif");
+}
+
+.function-image-2
+{
+    background-image: url("../Photos/Anniversary-function.jfif");
+}
+
+.function-image-3
+{
+    background-image: url("../Photos/ValentineFunction.jfif");
+}
+
+.function-image-4
+{
+    background-image: url("../Photos/Christmas-function.jfif");
+}
+
+.function-content
+{   
+    padding: 20px;
+    background-color: #FAFAFA;
+}
+
+.function-content-name
+{
+    padding-bottom: 100px;
+}
+
+.function-link
+{
+    text-decoration: none;
+}
+
+.function-content-name, .function-content-note 
+{
+    margin: 0;
+}
+
+.marketing-section
+{
+    height: 240px;
+    background-color: #F7941E;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.marketing-section-content
+{
+    font-size: 32px;
+}
+
+.marketing-section-content p
+{   
+    margin: 20px;
+}
+
+.marketing-section-element
+{   
+    padding: 20px;
+    margin: 20px;
+}
+
+.marketing-section-links
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.marketing-section-links a
+{
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.black-link, .normal-link
+{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+}
+
+.black-link
+{
+    background-color: black;   
+}
+
+.black-link a
+{
+    color: white;
+}
+
+.blog-poster
+{
+    display: flex;
+    flex-direction: row;
+    height: 370px;
+    background-color: black;
+}
+
+.features-section-header
+{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+
+}
+
+.blog-poster-image
+{
+    background-image: url("../Photos/blogs.jfif");
+    height: 370px;
+    width: 370px;
+}
+
+.blog-big-header-text
+{
+    font-size: 32px;
+}
+
+.blog-text
+{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 50px 70px;
+}
+
+.blog-text .small-text
+{
+    font-size: 14px;
+}
+
+.blog-text .big-text
+{   
+    max-width: 492px;
+    font-size: 48px;
+}
+
+
+
+.blog-text a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.features
+{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding: 30px;
+
+}
+.feature-card
+{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-card-header
+{   
+    font-weight: bold;
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+
+.feature-card-content
+{   
+    display: flex;
+    margin: auto auto 10px auto;
+    padding-bottom: 30px;
+}
+
+.feature-card a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.footer-div
+{
+    display: flex;
+    border-bottom: 1px solid black;
+    padding: 0 20px;
+}
+
+.footer-items
+{
+    margin: 40px;
+    font-weight: bold;
+}
+
+.footer-div .logo
+{
+    margin: 0 60px;
+    color: #F7941E;
+}
+
+.icons
+{   
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.icons i
+{
+    font-size: 30px;
+    display: flex;
+    padding: 10px;
+}
+
+.footer-corp
+{   
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
