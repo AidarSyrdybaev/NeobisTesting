@@ -26,6 +26,7 @@ header
 {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px 20px;
 }
 nav .nav-div
@@ -50,7 +51,6 @@ nav .nav-div
     justify-content: center;
     align-items: center;
     padding: 10px 10px 10px 10px;
-    margin-top: 50px;
     border-radius: 10px;
 
 }
