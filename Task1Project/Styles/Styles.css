@@ -156,11 +156,17 @@ nav .nav-div
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-bottom: 20px;
 }
 
 .function-cards
 {
     margin: 0 10px;
+}
+
+.function-cards:hover
+{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .function-image
 {
@@ -356,6 +362,11 @@ nav .nav-div
     display: flex;
     margin: auto auto 10px auto;
     padding-bottom: 30px;
+}
+
+.feature-card:hover
+{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .feature-card a
